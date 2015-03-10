@@ -25,7 +25,7 @@ def worker(identifier, skip, count):
     reviews_collection = MongoClient(Settings.MONGO_CONNECTION_STRING)[Settings.REVIEWS_DATABASE][
         Settings.REVIEWS_COLLECTION]
     tags_collection = MongoClient(Settings.MONGO_CONNECTION_STRING)[Settings.TAGS_DATABASE][
-        Settings.REVIEWS_COLLECTION]
+        Settings.CORPUS_COLLECTION]
 
     batch_size = 50
     for batch in range(0, count, batch_size):
